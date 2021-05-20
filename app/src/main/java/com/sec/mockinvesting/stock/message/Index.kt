@@ -1,6 +1,6 @@
 package com.sec.mockinvesting.stock.message
 
-class Index(
+data class Index(
     val indexName: IndexName,
     val index: Double,
     val time: String,
