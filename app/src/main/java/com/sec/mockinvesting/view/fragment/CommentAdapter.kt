@@ -14,15 +14,14 @@ class CommentAdapter(private val dataSet: Array<String>) :
         return CommentViewHolder(binding)
     }
 
-    override fun getItemCount(): Int {
-        return items.size
-    }
+    override fun getItemCount() = items.size
 
     override fun onBindViewHolder(holder: CommentViewHolder, position: Int) {
         holder.bind(items[position])
     }
 
-    class CommentViewHolder(val binding: CommentItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class CommentViewHolder(val binding: CommentItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(string: String) {
             binding.itemText.setText(string)
         }
